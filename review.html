@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GraphVerse — HCP–HCO 360 Review</title>
+<style>
+:root{--nav:#073d39;--nav2:#0f766e;--accent:#13a27f;--ink:#10233d;--muted:#66758a;--line:#dbe5ec;--bg:#f5f8fb;--white:#fff;--blue:#2563eb;--violet:#6d28d9;--pink:#db2777;--orange:#ea580c;--amber:#b45309}
+*{box-sizing:border-box}body{margin:0;font:14px Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+input[type=radio]{position:absolute;left:-9999px}
+.app{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.side{background:linear-gradient(180deg,var(--nav),#041f22);color:#d9efea;padding:22px 14px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand{font-size:28px;font-weight:800;padding:0 10px 18px;border-bottom:1px solid #ffffff18}.brand small{display:block;font-size:9px;letter-spacing:2.4px;color:#9ed4ca;margin-top:4px}
+.group{font-size:9px;letter-spacing:1.6px;color:#75a9a1;margin:22px 10px 7px}
+.navlabel{display:block;width:100%;padding:10px 11px;border-radius:9px;color:#d9efea;cursor:pointer}.navlabel:hover{background:#ffffff13;color:#fff}
+.main{min-width:0}.top{height:66px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 24px;gap:14px;position:sticky;top:0;z-index:5}
+.search{flex:1;max-width:650px;border:1px solid var(--line);background:#f8fafc;padding:10px 13px;border-radius:11px;color:var(--muted)}.topright{margin-left:auto;display:flex;align-items:center;gap:12px;font-size:11px}.pill{padding:7px 10px;border-radius:999px;background:#edf8f4;color:#0f766e;font-weight:800}.avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--nav);color:#fff;font-weight:800}
+.content{padding:25px 28px 50px;max-width:1650px;margin:auto}.view{display:none}
+#v-home:checked ~ .app .view-home,
+#v-loading:checked ~ .app .view-loading,
+#v-ontology:checked ~ .app .view-ontology,
+#v-explore:checked ~ .app .view-explore,
+#v-rag:checked ~ .app .view-rag,
+#v-gds:checked ~ .app .view-gds,
+#v-life:checked ~ .app .view-life,
+#v-devops:checked ~ .app .view-devops,
+#v-templates:checked ~ .app .view-templates,
+#v-reviews:checked ~ .app .view-reviews,
+#v-settings:checked ~ .app .view-settings{display:block}
+#v-home:checked ~ .app label[for=v-home],
+#v-loading:checked ~ .app label[for=v-loading],
+#v-ontology:checked ~ .app label[for=v-ontology],
+#v-explore:checked ~ .app label[for=v-explore],
+#v-rag:checked ~ .app label[for=v-rag],
+#v-gds:checked ~ .app label[for=v-gds],
+#v-life:checked ~ .app label[for=v-life],
+#v-devops:checked ~ .app label[for=v-devops],
+#v-templates:checked ~ .app label[for=v-templates],
+#v-reviews:checked ~ .app label[for=v-reviews],
+#v-settings:checked ~ .app label[for=v-settings]{background:#ffffff13;color:#fff;box-shadow:inset 3px 0 #23c4a1}
+.hero{background:linear-gradient(115deg,#073d39,#0f766e);color:#fff;padding:25px;border-radius:18px;box-shadow:0 10px 28px #0f172a12}.hero h1{font-size:34px;margin:0}.hero p{color:#d9f0eb;max-width:850px;margin:8px 0 0}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.chip{font-size:10px;padding:7px 10px;border:1px solid #ffffff2d;background:#ffffff13;border-radius:999px}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin:4px 0 15px}.head h1{font-size:29px;margin:0}.head p{color:var(--muted);margin:7px 0 0}.levels{display:flex;gap:6px}.levels span{font-size:10px;background:#fff;border:1px solid var(--line);padding:6px 9px;border-radius:999px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:15px 0}.metric,.panel{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 3px 12px #0f172a07}.metric{padding:14px}.metric b{display:block;font-size:22px}.metric small{color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.grid3{display:grid;grid-template-columns:1fr 1.15fr .85fr;gap:14px}.panel{padding:15px}.panel h3{margin:0 0 11px;font-size:15px}.sub{color:var(--muted);font-size:11px}
+table{width:100%;border-collapse:collapse;font-size:10px}th{text-align:left;background:#f5f8fa;color:#627184;padding:8px}td{padding:8px;border-bottom:1px solid #edf1f4}
+.badge{display:inline-block;padding:4px 7px;border-radius:999px;font-size:8px;font-weight:800}.ok{background:#e4f7ef;color:#0b7b5c}.warn{background:#fff2da;color:#9a5a00}.info{background:#eaf2ff;color:#1d4ed8}
+.reco{padding:10px;border:1px solid #d0e8e1;background:#f6fbf9;border-radius:9px;margin-bottom:8px}.reco b{font-size:10px}.reco p{font-size:9px;color:var(--muted);margin:4px 0 0}.note{padding:10px;border:1px solid #f6d59d;background:#fff8e8;border-radius:9px;color:#805400;font-size:10px}
+.graph{height:300px;position:relative;border:1px solid var(--line);border-radius:12px;background:radial-gradient(circle,#fbfffe,#f8fafc)}.node{position:absolute;width:84px;height:38px;border-radius:22px;color:#fff;display:grid;place-items:center;font-size:9px;font-weight:800;z-index:2}.edge{position:absolute;height:2px;background:#9fb2c0;transform-origin:left center}.edge span{position:absolute;top:-14px;left:24%;font-size:7px;color:#65758b;background:#fff;padding:2px}
+.code{background:#102a43;color:#d9f8ef;padding:12px;border-radius:10px;font:10px/1.55 Consolas,monospace;white-space:pre-wrap}.timeline{display:grid;gap:8px}.tl{display:grid;grid-template-columns:20px 1fr auto;gap:8px;align-items:center}.tl i{width:18px;height:18px;border-radius:50%;background:#dce5eb;display:grid;place-items:center;font-style:normal;font-size:8px}.tl.done i{background:#0f766e;color:#fff}.tl small{color:var(--muted)}
+.story{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.screen{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}.screenhead{padding:11px 13px;background:#eef7f4;border-bottom:1px solid var(--line);font-weight:800}.screenbody{padding:13px}.screenbody p{font-size:11px;color:var(--muted);line-height:1.55}.n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:9px;margin-right:7px}
+@media(max-width:980px){.app{grid-template-columns:1fr}.side{display:none}.grid2,.grid3,.story{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.content{padding:18px}}
+</style>
+</head>
+<body>
+<input type="radio" name="view" id="v-home" checked>
+<input type="radio" name="view" id="v-loading">
+<input type="radio" name="view" id="v-ontology">
+<input type="radio" name="view" id="v-explore">
+<input type="radio" name="view" id="v-rag">
+<input type="radio" name="view" id="v-gds">
+<input type="radio" name="view" id="v-life">
+<input type="radio" name="view" id="v-devops">
+<input type="radio" name="view" id="v-templates">
+<input type="radio" name="view" id="v-reviews">
+<input type="radio" name="view" id="v-settings">
+<div class="app">
+<aside class="side">
+<div class="brand">GraphVerse<small>CONNECTED KNOWLEDGE</small></div>
+<div class="group">HOME</div><label class="navlabel" for="v-home">Command Center</label>
+<div class="group">BUILD</div><label class="navlabel" for="v-loading">Data Loading</label><label class="navlabel" for="v-ontology">Ontology Studio</label>
+<div class="group">USE</div><label class="navlabel" for="v-explore">Explore & Query</label><label class="navlabel" for="v-rag">GraphRAG</label><label class="navlabel" for="v-gds">Graph Data Science</label>
+<div class="group">OPERATE</div><label class="navlabel" for="v-life">Knowledge Lifecycle</label><label class="navlabel" for="v-devops">DevOps & Delivery</label>
+<div class="group">LIBRARY & REVIEWS</div><label class="navlabel" for="v-templates">Templates</label><label class="navlabel" for="v-reviews">Review Inbox</label>
+<div class="group">ADMIN</div><label class="navlabel" for="v-settings">Settings</label>
+</aside>
+<main class="main">
+<div class="top"><div class="search">Search HCPs, HCOs, relationships, or ask GraphVerse…</div><div class="topright"><span class="pill">REVIEW • HCP–HCO 360</span><span>Reviews 3</span><div class="avatar">RR</div><b>Rajesh</b></div></div>
+<div class="content">
+
+<section class="view view-home">
+<div class="hero"><h1>Connected HCP–HCO Intelligence</h1><p>Unify HCP, HCO, affiliation, specialty, territory, brand engagement and evidence into a governed Neo4j knowledge graph.</p><div class="chips"><span class="chip">Ontology v1.4 draft</span><span class="chip">Graph candidate KG-014</span><span class="chip">3 approvals pending</span></div></div>
+<div class="metrics"><div class="metric"><b>128,420</b><small>HCP entities</small></div><div class="metric"><b>18,760</b><small>HCO entities</small></div><div class="metric"><b>342,600</b><small>Active affiliations</small></div><div class="metric"><b>96.8%</b><small>Knowledge freshness</small></div></div>
+<div class="grid2"><div class="panel"><h3>Knowledge graph overview</h3><div class="graph"><div class="edge" style="left:20%;top:50%;width:23%;transform:rotate(-24deg)"><span>AFFILIATED_WITH</span></div><div class="edge" style="left:42%;top:31%;width:28%;transform:rotate(21deg)"><span>ENGAGED_WITH</span></div><div class="edge" style="left:42%;top:31%;width:30%;transform:rotate(68deg)"><span>HAS_SPECIALTY</span></div><div class="node" style="left:34%;top:24%;background:#2563eb">HCP</div><div class="node" style="left:9%;top:53%;background:#0f766e">HCO</div><div class="node" style="left:70%;top:42%;background:#db2777">Brand</div><div class="node" style="left:58%;top:72%;background:#6d28d9">Specialty</div></div></div><div class="panel"><h3>My next actions</h3><div class="reco"><b>Review HCP–HCO data scope</b><p>4 required source objects selected.</p></div><div class="reco"><b>Validate ontology v1.4</b><p>2 non-critical warnings remain.</p></div><div class="reco"><b>Run HCP community analysis</b><p>GDS configuration is ready.</p></div></div></div>
+</section>
+
+<section class="view view-loading">
+<div class="head"><div><h1>Data Loading</h1><p>10 guided screens from business outcome to Neo4j publication</p></div><div class="levels"><span>Basic</span><span>Intermediate</span><span>Advanced</span></div></div>
+<div class="story">
+<div class="screen"><div class="screenhead"><span class="n">1</span>Define Outcome</div><div class="screenbody"><p>HCP–HCO 360 business questions, template/manual start, scope and success criteria.</p><div class="reco"><b>Example question</b><p>Which HCPs are affiliated with target HCOs and recently engaged with Brand X?</p></div></div></div>
+<div class="screen"><div class="screenhead"><span class="n">2</span>Connect Sources</div><div class="screenbody"><table><tr><td>Snowflake</td><td><span class="badge ok">Tested</span></td></tr><tr><td>Salesforce</td><td><span class="badge ok">Tested</span></td></tr><tr><td>Oracle</td><td><span class="badge warn">Configured</span></td></tr></table></div></div>
+<div class="screen"><div class="screenhead"><span class="n">3</span>Select Data</div><div class="screenbody"><table><tr><td>HCP_MASTER</td><td><span class="badge ok">Required</span></td></tr><tr><td>HCO_MASTER</td><td><span class="badge ok">Required</span></td></tr><tr><td>AFFILIATION_FACT</td><td><span class="badge ok">Required</span></td></tr><tr><td>ENGAGEMENT_FACT</td><td><span class="badge ok">Required</span></td></tr></table></div></div>
+<div class="screen"><div class="screenhead"><span class="n">4</span>Confirm Formats</div><div class="screenbody"><table><tr><td>HCP_ID</td><td>String ID</td><td><span class="badge ok">Valid</span></td></tr><tr><td>AFFILIATION_DATE</td><td>DD/MM/YYYY</td><td><span class="badge warn">Review</span></td></tr></table></div></div>
+<div class="screen"><div class="screenhead"><span class="n">5</span>Build Entities</div><div class="screenbody"><p>Source fields → HCP/HCO entities → canonical identifiers → unified property view.</p><div class="reco"><b>HCP-00142</b><p>Dr. Anil Sharma • Cardiology • CityCare Heart Institute</p></div></div></div>
+<div class="screen"><div class="screenhead"><span class="n">6</span>Define Relationships</div><div class="screenbody"><p>AFFILIATED_WITH • many-to-many • effective dates • evidence required.</p></div></div>
+<div class="screen"><div class="screenhead"><span class="n">7</span>Validate & Test</div><div class="screenbody"><p>48/50 tests passed • 0 critical • 145 unresolved references quarantined.</p></div></div>
+<div class="screen"><div class="screenhead"><span class="n">8</span>Review Graph Preview</div><div class="screenbody"><p>147K entities • 342K affiliations • full lineage • quarantined records excluded.</p></div></div>
+<div class="screen"><div class="screenhead"><span class="n">9</span>Approve</div><div class="screenbody"><p>Reviewer sees exact scope, quality evidence, impact, exceptions and target Neo4j environment.</p></div></div>
+<div class="screen"><div class="screenhead"><span class="n">10</span>Load & Publish</div><div class="screenbody"><div class="timeline"><div class="tl done"><i>✓</i><b>Extract</b><small>100%</small></div><div class="tl done"><i>✓</i><b>Validate</b><small>100%</small></div><div class="tl"><i>3</i><b>Load / reconcile</b><small>Prototype only</small></div></div></div></div>
+</div>
+</section>
+
+<section class="view view-ontology">
+<div class="head"><div><h1>Ontology Studio</h1><p>9 screens from business meaning to Neo4j engineering</p></div><div class="levels"><span>Basic</span><span>Intermediate</span><span>Advanced</span></div></div>
+<div class="story">
+<div class="screen"><div class="screenhead"><span class="n">1</span>Ontology Home</div><div class="screenbody"><p>Basic complete • Intermediate 5/7 • Advanced 2/6.</p></div></div>
+<div class="screen"><div class="screenhead"><span class="n">2</span>Concepts & Properties</div><div class="screenbody"><p>HCP, HCO, Specialty, Engagement, Brand, Territory, Publication, Affiliation.</p></div></div>
+<div class="screen"><div class="screenhead"><span class="n">3</span>Relationships</div><div class="screenbody"><p>AFFILIATED_WITH, ENGAGED_WITH, HAS_SPECIALTY, PART_OF, PUBLISHED.</p></div></div>
+<div class="screen"><div class="screenhead"><span class="n">4</span>Hierarchy</div><div class="screenbody"><pre>HealthcareEntity
+├─ HCP
+└─ HCO
+   ├─ Hospital
+   ├─ Clinic
+   └─ HealthSystem</pre></div></div>
+<div class="screen"><div class="screenhead"><span class="n">5</span>Rules & Semantics</div><div class="screenbody"><p>Business rules • SHACL • RDF/RDFS • OWL • inference policies.</p></div></div>
+<div class="screen"><div class="screenhead"><span class="n">6</span>Visual Model</div><div class="screenbody"><p>Canvas • relationship matrix • hierarchy • multi-hop • optional 3D.</p></div></div>
+<div class="screen"><div class="screenhead"><span class="n">7</span>Engineering</div><div class="screenbody"><div class="code">CREATE CONSTRAINT hcp_id IF NOT EXISTS
+FOR (h:HCP) REQUIRE h.hcpId IS UNIQUE;</div></div></div>
+<div class="screen"><div class="screenhead"><span class="n">8</span>Validate & Impact</div><div class="screenbody"><p>18/20 competency tests • 0 critical • 3 Cypher + 1 GraphRAG + 1 GDS asset affected.</p></div></div>
+<div class="screen"><div class="screenhead"><span class="n">9</span>Review & Publish</div><div class="screenbody"><p>Before/after model, technical package, migration impact and human approval.</p></div></div>
+</div>
+</section>
+
+<section class="view view-explore">
+<div class="head"><div><h1>Explore & Query</h1><p>Search, navigate and explain connected HCP/HCO knowledge</p></div></div>
+<div class="grid2"><div class="panel"><h3>Entity 360 — Dr. Anil Sharma</h3><div class="graph"><div class="node" style="left:35%;top:25%;background:#2563eb">HCP</div><div class="node" style="left:10%;top:57%;background:#0f766e">HCO</div><div class="node" style="left:68%;top:43%;background:#db2777">Brand</div><div class="node" style="left:57%;top:72%;background:#6d28d9">Specialty</div></div></div><div class="panel"><h3>Profile</h3><p>Cardiology<br>CityCare Heart Institute<br>12 brand engagements<br>7 evidence records</p><div class="reco"><b>Multi-hop</b><p>HCP → HCO → Territory → Brand</p></div></div></div>
+</section>
+
+<section class="view view-rag">
+<div class="head"><div><h1>GraphRAG</h1><p>Question → retrieve → evidence → evaluate → publish</p></div><div class="levels"><span>Basic</span><span>Intermediate</span><span>Advanced</span></div></div>
+<div class="grid2"><div class="panel"><h3>Business question</h3><p>Which cardiologists are affiliated with CityCare Heart Institute and recently engaged with Brand X?</p><div class="reco"><b>AFF-0188</b><p>Current affiliation</p></div><div class="reco"><b>ENG-4201</b><p>Brand X engagement • 17 days ago</p></div></div><div class="panel"><h3>Evidence-backed answer</h3><p>Dr. Anil Sharma is a cardiologist with a current affiliation to CityCare Heart Institute and an approved Brand X engagement recorded 17 days ago.</p><div class="note">Synthetic answer for product review.</div></div></div>
+</section>
+
+<section class="view view-gds">
+<div class="head"><div><h1>Graph Data Science</h1><p>Objective → projection → algorithm → results → publish</p></div><div class="levels"><span>Basic</span><span>Intermediate</span><span>Advanced</span></div></div>
+<div class="grid2"><div class="panel"><h3>Recommended analysis</h3><div class="reco"><b>HCP Community Discovery</b><p>Leiden using affiliation + co-publication relationships.</p></div><table><tr><td>Leiden</td><td><span class="badge ok">Recommended</span></td></tr><tr><td>Louvain</td><td><span class="badge info">Alternative</span></td></tr></table></div><div class="panel"><h3>Result preview</h3><p>Cardiology community • 42 HCPs<br>Oncology community • 31 HCPs<br>Mixed network • 24 HCPs</p><div class="note">Community or centrality is not proof of clinical influence.</div></div></div>
+</section>
+
+<section class="view view-life">
+<div class="head"><div><h1>Knowledge Lifecycle</h1><p>Monitor → detect → impact → review → refresh</p></div></div>
+<div class="metrics"><div class="metric"><b>96.8%</b><small>Freshness</small></div><div class="metric"><b>98.4%</b><small>Quality</small></div><div class="metric"><b>3</b><small>Exceptions</small></div><div class="metric"><b>2</b><small>Stale assets</small></div></div>
+<div class="grid2"><div class="panel"><h3>Recent changes</h3><table><tr><td>12 affiliation updates</td><td><span class="badge info">Refresh</span></td></tr><tr><td>3 engagement events</td><td><span class="badge ok">Within policy</span></td></tr><tr><td>1 license withdrawal</td><td><span class="badge warn">Review</span></td></tr></table></div><div class="panel"><h3>Impact chain</h3><p>Source → Mapping → Graph → Cypher → GraphRAG → GDS</p></div></div>
+</section>
+
+<section class="view view-devops">
+<div class="head"><div><h1>DevOps & Delivery</h1><p>Version → validate → approve → deploy → recover</p></div></div>
+<div class="grid2"><div class="panel"><h3>Versions</h3><table><tr><th>Asset</th><th>DEV</th><th>TEST</th><th>PROD</th></tr><tr><td>Ontology</td><td>1.4</td><td>1.3</td><td>1.2</td></tr><tr><td>Graph</td><td>KG-014</td><td>KG-013</td><td>KG-011</td></tr><tr><td>GraphRAG</td><td>v3</td><td>v2</td><td>v2</td></tr></table></div><div class="panel"><h3>CI / Validation</h3><p>Compile ✓<br>Ontology ✓<br>Cypher/APOC ✓<br>GraphRAG evaluation ✓<br>Integration running</p></div></div>
+</section>
+
+<section class="view view-templates">
+<div class="head"><div><h1>Templates Library</h1><p>Reusable solution designs</p></div></div>
+<div class="metrics"><div class="metric"><b>HCP–HCO 360</b><small>Affiliation & engagement</small></div><div class="metric"><b>KOL Network</b><small>Publication communities</small></div><div class="metric"><b>Account Network</b><small>HCO + territory</small></div><div class="metric"><b>Custom</b><small>Bring your own model</small></div></div>
+</section>
+
+<section class="view view-reviews">
+<div class="head"><div><h1>Review Inbox</h1><p>All human decisions in one place</p></div></div>
+<div class="panel"><table><tr><th>Item</th><th>Workspace</th><th>Priority</th></tr><tr><td>HCP–HCO data scope</td><td>Data Loading</td><td><span class="badge warn">High</span></td></tr><tr><td>Ontology v1.4</td><td>Ontology Studio</td><td><span class="badge info">Medium</span></td></tr><tr><td>TEST deployment</td><td>DevOps</td><td><span class="badge warn">High</span></td></tr></table></div>
+</section>
+
+<section class="view view-settings">
+<div class="head"><div><h1>Settings</h1><p>Connections, models and environments</p></div></div>
+<div class="grid3"><div class="panel"><h3>Connections</h3><p>Neo4j DEV ✓<br>Snowflake ✓<br>Salesforce ✓<br>Oracle configured</p></div><div class="panel"><h3>Model Providers</h3><div class="note">No real LLM is connected in this static review build.</div></div><div class="panel"><h3>Environments</h3><p>DEV • TEST • PROD</p></div></div>
+</section>
+
+</div></main></div>
+</body></html>
