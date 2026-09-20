@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GraphVerse Prototype Preview</title>
+<style>
+html,body,iframe{width:100%;height:100%;margin:0;border:0;overflow:hidden}
+#msg{position:fixed;inset:0;display:grid;place-items:center;background:#f5f8fb;font:14px Segoe UI,Arial;color:#073d39;z-index:5}
+</style>
+</head>
+<body>
+<div id="msg">Loading GraphVerse prototype…</div>
+<iframe id="gv" src="./index.html?v=3"></iframe>
+<script>
+const frame=document.getElementById('gv');
+frame.addEventListener('load',()=>{
+  try{
+    const w=frame.contentWindow;
+    const d=frame.contentDocument;
+    const login=d.getElementById('login');
+    const app=d.getElementById('app');
+    const ask=d.getElementById('ab');
+    if(login) login.classList.add('hide');
+    if(app) app.classList.remove('hide');
+    if(ask) ask.classList.remove('hide');
+    if(typeof w.render==='function') w.render();
+    document.getElementById('msg').style.display='none';
+  }catch(e){
+    document.getElementById('msg').textContent='Preview could not start: '+e.message;
+  }
+});
+</script>
+</body>
+</html>
