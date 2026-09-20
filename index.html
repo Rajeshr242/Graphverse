@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>GraphVerse — Graph Engineering Console V9</title><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>GraphVerse — Knowledge Architecture V10</title><style>
 :root{--ink:#0b1f37;--muted:#68798d;--line:#dce6eb;--bg:#f3f7f8;--white:#fff;--forest:#073c38;--mint:#35c8a6;--blue:#3a70f2;--violet:#7659f4;--pink:#d94f91;--orange:#f18a49;--red:#bd4855;--shadow:0 20px 55px rgba(11,31,55,.11);--soft:0 8px 24px rgba(11,31,55,.07)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 86% -8%,rgba(53,200,166,.12),transparent 28%),var(--bg)}
 button,input,select,textarea{font:inherit}button{cursor:pointer}.hidden{display:none!important}.app{min-height:100vh;display:grid;grid-template-columns:76px 276px minmax(0,1fr)}
@@ -219,6 +219,18 @@ label{font-size:12px}input,select,textarea{font-size:13px;padding:10px 11px}.not
 @media(max-width:1350px){.ge-main-console{grid-template-columns:220px 1fr}.ge-ai-pane{grid-column:1/-1}.ge-detail-grid{grid-template-columns:1fr 1fr}.ge-code-card{grid-column:1/-1}.ge-compiler-results{grid-template-columns:1fr}.ge-sandbox-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:1000px){.ge-main-console,.ge-detail-grid,.ge-compiler-head,.ge-package{grid-template-columns:1fr}.ge-contract-spine{grid-template-columns:1fr}.ge-contract-spine>em{display:none}.ge-trace-flow{grid-template-columns:1fr}.ge-trace-flow>i{transform:rotate(90deg)}.ge-manual-grid{grid-template-columns:1fr}.ge-physical-summary{grid-template-columns:repeat(3,1fr)}}
 
+
+/* ===== Knowledge Architecture V10 ===== */
+.v10-architecture{display:grid;gap:12px}.v10-arch-hero{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:22px;align-items:center;padding:27px 29px;border-radius:23px;color:#fff;background:radial-gradient(circle at 85% 12%,rgba(53,200,166,.23),transparent 24%),linear-gradient(125deg,#061f2f,#0b5360 56%,#173858);box-shadow:var(--shadow)}.v10-arch-hero>div:first-child>span,.v10-step-label span,.v10-architecture-summary>div:first-child>span{font-size:10px;letter-spacing:1.4px;color:#93decf;font-weight:800}.v10-arch-hero h2{font-size:31px;line-height:1.12;margin:6px 0 8px}.v10-arch-hero p{font-size:13px;line-height:1.5;color:#c9e2dd;max-width:820px}.v10-arch-current{padding:15px;border:1px solid #ffffff20;border-radius:15px;background:#ffffff0a}.v10-arch-current span{font-size:8px;color:#9ddfd2}.v10-arch-current b{display:block;font-size:19px;margin:5px 0}.v10-arch-current small{font-size:9px;color:#bdd9d3}
+.v10-definition-layer,.v10-execution-layer,.v10-experience-layer,.v10-architecture-summary{padding:18px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--soft)}.v10-step-label{display:grid;grid-template-columns:42px 1fr;gap:10px;align-items:center}.v10-step-label i{grid-row:1/4;width:42px;height:42px;border-radius:12px;background:#0b3040;color:#fff;display:grid;place-items:center;font-style:normal;font-size:10px;font-weight:900}.v10-step-label h3{font-size:19px;margin:3px 0}.v10-step-label p{font-size:10px;color:var(--muted);margin:0}.v10-semantic-lock{display:grid;grid-template-columns:54px 1fr auto;gap:12px;align-items:center;margin-top:14px;padding:14px;border:1px solid #a9dbd0;border-radius:14px;background:linear-gradient(90deg,#effaf6,#fff)}.v10-semantic-icon{width:52px;height:52px;border-radius:15px;background:#073c38;color:#fff;display:grid;place-items:center;font-size:20px}.v10-semantic-lock b{font-size:15px}.v10-semantic-lock span{display:block;font-size:10px;color:#0f766e;margin-top:2px}.v10-semantic-lock small{display:block;font-size:9px;color:var(--muted);margin-top:5px}.v10-semantic-lock em{font-size:9px;color:#0f766e;font-style:normal;font-weight:900;padding:7px 9px;background:#dff5ee;border-radius:999px}.v10-semantic-note{display:grid;grid-template-columns:130px 1fr;gap:9px;margin-top:9px;padding:9px 11px;border-radius:10px;background:#f7fafb}.v10-semantic-note b{font-size:10px}.v10-semantic-note span{font-size:9px;color:var(--muted)}.v10-down-arrow{text-align:center;font-size:24px;color:#74bcae;height:26px}
+.v10-architecture-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.v10-architecture-choices>button{display:grid;grid-template-columns:48px 1fr 25px;gap:10px;text-align:left;align-items:start;padding:14px;border:1px solid var(--line);border-radius:15px;background:#fff;min-height:150px;transition:.2s}.v10-architecture-choices>button:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(11,31,55,.08)}.v10-architecture-choices>button.selected{border-color:#61c8b1;background:linear-gradient(145deg,#effaf6,#fff);box-shadow:0 13px 26px rgba(15,118,110,.1)}.v10-choice-icon{width:46px;height:46px;border-radius:13px;background:#0b3040;color:#fff;display:grid;place-items:center;font-size:15px;font-weight:900}.v10-architecture-choices b{font-size:13px}.v10-architecture-choices span{display:block;font-size:9px;line-height:1.45;color:#344b61;margin-top:4px}.v10-architecture-choices small{display:block;font-size:8px;line-height:1.45;color:var(--muted);margin-top:7px}.v10-architecture-choices>button>i{width:23px;height:23px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-style:normal}.v10-architecture-choices>button.selected>i{background:#35c8a6;border-color:#35c8a6}
+.v10-architecture-story{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:13px;padding:14px;border:1px solid var(--line);border-radius:14px;background:#f9fbfc}.v10-architecture-story>i{font-style:normal;font-size:20px;color:#0f766e}.v10-story-core,.v10-story-platform,.v10-hybrid-split>div{padding:13px 16px;border-radius:13px;min-width:210px}.v10-story-core{background:#0b3040;color:#fff}.v10-story-core span,.v10-story-platform span,.v10-hybrid-split span{font-size:8px;font-weight:800}.v10-story-core b,.v10-story-platform b,.v10-hybrid-split b{display:block;font-size:12px;margin-top:4px}.v10-story-platform small,.v10-hybrid-split small{display:block;font-size:8px;color:var(--muted);margin-top:4px}.v10-story-platform.materialized,.v10-hybrid-split .materialized{background:#eff9f6;border:1px solid #b8ddd4}.v10-story-platform.virtual,.v10-hybrid-split .virtual{background:#f2f5ff;border:1px solid #cbd5f7}.v10-hybrid-split{display:grid;grid-template-columns:1fr 1fr;gap:7px}.v10-hybrid-explain{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}.v10-hybrid-explain>div{padding:11px;border:1px solid var(--line);border-radius:11px}.v10-hybrid-explain b{font-size:10px}.v10-hybrid-explain span,.v10-hybrid-explain em{display:block;font-size:8px;color:var(--muted);margin-top:3px;font-style:normal}.v10-hybrid-explain em{color:#0f766e}
+.v10-experience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:14px}.v10-experience-grid>button{display:grid;grid-template-columns:40px 1fr 24px;gap:9px;text-align:left;align-items:start;border:1px solid var(--line);background:#fff;border-radius:13px;padding:12px}.v10-experience-grid>button.selected{border-color:#6bcab6;background:#eff9f6}.v10-experience-grid>button.disabled{opacity:.45}.v10-experience-grid>button>i{width:39px;height:39px;border-radius:11px;background:#0b3040;color:#fff;display:grid;place-items:center;font-style:normal}.v10-experience-grid b{font-size:11px}.v10-experience-grid span{display:block;font-size:8px;color:#40556b;margin-top:3px}.v10-experience-grid small{display:block;font-size:8px;color:var(--muted);margin-top:5px}.v10-experience-grid em{font-style:normal;font-size:12px;color:#0f766e}
+.v10-architecture-summary{display:grid;grid-template-columns:260px 1fr auto;gap:15px;align-items:center;background:linear-gradient(90deg,#f1faf7,#fff)}.v10-architecture-summary h3{font-size:15px;margin:4px 0}.v10-summary-chain{display:flex;gap:8px;align-items:center;justify-content:center}.v10-summary-chain b{font-size:10px;padding:7px 9px;border-radius:9px;background:#fff;border:1px solid var(--line)}.v10-summary-chain i{font-style:normal;color:#0f766e}.v10-architecture-summary>div:last-child{display:flex;gap:6px}.v10-architecture-summary button{font-size:9px;padding:8px 10px}
+.launch-architecture-banner{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px 18px;border-bottom:1px solid var(--line)}.launch-architecture-banner>div{padding:10px;border-radius:10px;background:#f5faf8}.launch-architecture-banner span{font-size:8px;color:#0f766e;font-weight:800}.launch-architecture-banner b{display:block;font-size:11px;margin-top:3px}.launch-architecture-banner small{display:block;font-size:8px;color:var(--muted);margin-top:3px}
+.v10-publish-definition{display:flex;gap:12px;align-items:center;padding:13px 15px;margin-bottom:10px;border:1px solid var(--line);border-radius:14px;background:#fff}.v10-publish-definition>div:first-child{display:grid;grid-template-columns:42px 1fr;gap:9px;align-items:center}.v10-publish-definition>div:first-child>i{grid-row:1/4;width:42px;height:42px;border-radius:11px;background:#073c38;color:#fff;display:grid;place-items:center;font-style:normal}.v10-publish-definition span{font-size:8px;color:#0f766e;font-weight:800}.v10-publish-definition b{display:block;font-size:11px;margin-top:2px}.v10-publish-definition small{display:block;font-size:8px;color:var(--muted);margin-top:2px}.v10-publish-definition>em{font-style:normal;font-size:20px;color:#0f766e}.selected-architecture{flex:1;padding:10px 12px;border-radius:10px;background:#eff9f6;border:1px solid #bce0d7}.strategy-paths>div{padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff;opacity:.45}.strategy-paths>div.selected{opacity:1;border-color:#67cdb8;background:#eff9f6}.strategy-paths>div i{width:35px;height:35px;border-radius:10px;background:#0d3040;color:#fff;display:grid;place-items:center;font-style:normal}.strategy-paths>div b{display:block;font-size:11px;margin-top:7px}.strategy-paths>div span,.strategy-paths>div small,.strategy-paths>div em{display:block;font-size:8px;color:var(--muted);margin-top:3px;font-style:normal}.strategy-paths>div em{color:#0f766e;font-weight:800;margin-top:7px}
+@media(max-width:1200px){.v10-architecture-choices{grid-template-columns:1fr}.v10-experience-grid{grid-template-columns:repeat(2,1fr)}.v10-architecture-summary{grid-template-columns:1fr}.v10-architecture-summary>div:last-child{justify-content:flex-start}}
+
 </style></head>
 <body><div class="app">
 <aside class="iconrail"><div class="brandmark">G</div><div class="rail"><button class="active">◆</button><button>◫</button><button>◎</button><button>◌</button></div><div class="rail railfoot"><button>?</button><button>⚙</button></div></aside>
@@ -249,7 +261,8 @@ let useCaseConfigs={
       'Which HCP/HCO networks have recent Brand X engagement?',
       'What changed in the HCP/HCO network since the previous release?'
     ],
-    foundation:new Set(['Semantic Model','Neo4j Knowledge Graph','Virtual Semantic Model']),
+    foundation:new Set(['Semantic Model']),
+    executionArchitecture:'Hybrid',
     experiences:new Set(['Knowledge Explorer','AI & GraphRAG','Graph Intelligence'])
   },
   'Brand Engagement Network':{
@@ -260,7 +273,8 @@ let useCaseConfigs={
       'Which HCP/HCO networks have the highest recent Brand X engagement?',
       'How do engagement patterns differ by territory and channel?'
     ],
-    foundation:new Set(['Semantic Model','Neo4j Knowledge Graph']),
+    foundation:new Set(['Semantic Model']),
+    executionArchitecture:'Materialized Knowledge Graph',
     experiences:new Set(['Knowledge Explorer','AI & GraphRAG'])
   }
 };
@@ -447,7 +461,8 @@ function manualSemanticAction(kind){
  toast(kind+' added to SEM-014 draft with lineage and version history')
 }
 function saveManualSemanticEdits(){
- toast('Manual semantic edits saved as a new SEM-014 draft revision'); document.getElementById('manualSemanticEditor')?.classList.add('hidden')
+ toast('Manual semantic edits saved as a new SEM-014 draft revision');
+ document.getElementById('manualSemanticEditor')?.classList.add('hidden')
 }
 
 function W(id){return APP.workspaces.find(w=>w.id===id)}
@@ -482,8 +497,7 @@ function screenBody(s,wid){
  if(t==='semantic_compose') return semanticCompose();
  if(t==='semantic_validate') return semanticValidate();
  if(t==='initial_load_reconcile') return initialLoadReconcile();
- if(t==='incremental_adhoc') return incrementalAdhoc();
- if(t==='publish_verify') return publishVerify();
+ if(t==='incremental_adhoc') return incrementalAdhoc(); if(t==='publish_verify') return publishVerify();
  if(t==='data_map') return dataMap();
  if(t==='data_build') return dataBuildGraph();
  if(t==='formats') return formats();
@@ -642,15 +656,43 @@ function toggleUseCase(name,domain){
 }
 function ensureUseCaseConfig(name,domain){
  if(useCaseConfigs[name])return useCaseConfigs[name];
- useCaseConfigs[name]={outcome:'',audience:'',owner:'',questions:[],foundation:new Set(['Semantic Model']),experiences:new Set([]),domain};
+ useCaseConfigs[name]={outcome:'',audience:'',owner:'',questions:[],foundation:new Set(['Semantic Model']),executionArchitecture:'',experiences:new Set([]),domain};
  return useCaseConfigs[name]
 }
 function setActiveUseCase(name){activeUseCase=name;activeUseCasePhase='define';render()}
 function setUseCasePhase(phase){activeUseCasePhase=phase;render()}
 function addQuestionForActive(){const cfg=ensureUseCaseConfig(activeUseCase,'');const el=document.getElementById('newActiveQuestion');const q=(el?.value||'').trim();if(q){cfg.questions.push(q);toast('Business question added');render()}}
 function removeQuestionForActive(i){const cfg=ensureUseCaseConfig(activeUseCase,'');cfg.questions.splice(i,1);render()}
-function toggleFoundationForActive(name){const cfg=ensureUseCaseConfig(activeUseCase,'');if(cfg.foundation.has(name))cfg.foundation.delete(name);else cfg.foundation.add(name);if(!cfg.foundation.has('Neo4j Knowledge Graph')&&cfg.experiences.has('Graph Intelligence')){cfg.experiences.delete('Graph Intelligence');toast('Graph Intelligence disabled because it requires a materialized Neo4j graph.')}render()}
-function toggleExperienceForActive(name){const cfg=ensureUseCaseConfig(activeUseCase,'');const queryable=cfg.foundation.has('Neo4j Knowledge Graph')||cfg.foundation.has('Virtual Semantic Model');if(name==='Graph Intelligence'&&!cfg.foundation.has('Neo4j Knowledge Graph')){toast('Enable Neo4j Knowledge Graph first to use Graph Intelligence.');return}if((name==='Knowledge Explorer'||name==='AI & GraphRAG')&&!queryable){toast('Choose Neo4j Knowledge Graph or Virtual Semantic Model first.');return}if(cfg.experiences.has(name))cfg.experiences.delete(name);else cfg.experiences.add(name);render()}
+function toggleFoundationForActive(name){
+ const cfg=ensureUseCaseConfig(activeUseCase,'');
+ if(name==='Semantic Model'){toast('Semantic Model is mandatory for every GraphVerse knowledge product.');return}
+ toast('Choose the execution architecture below instead of combining foundation types.')
+}
+function setExecutionArchitecture(name){
+ const cfg=ensureUseCaseConfig(activeUseCase,'');
+ cfg.executionArchitecture=name;
+ if(name==='Virtual Knowledge Model'&&cfg.experiences.has('Graph Intelligence')){
+   cfg.experiences.delete('Graph Intelligence');
+   toast('Graph Intelligence disabled: Neo4j GDS requires materialized graph topology.')
+ }
+ render()
+}
+function toggleExperienceForActive(name){
+ const cfg=ensureUseCaseConfig(activeUseCase,'');
+ const arch=cfg.executionArchitecture||'';
+ const hasMaterialized=arch==='Materialized Knowledge Graph'||arch==='Hybrid';
+ const hasQueryable=!!arch;
+ if(name==='Graph Intelligence'&&!hasMaterialized){
+   toast('Graph Intelligence requires Materialized or Hybrid architecture because GDS needs graph topology in Neo4j.');
+   return
+ }
+ if((name==='Knowledge Explorer'||name==='AI & GraphRAG'||name==='API / Application Access')&&!hasQueryable){
+   toast('Choose an execution architecture first.');
+   return
+ }
+ if(cfg.experiences.has(name))cfg.experiences.delete(name);else cfg.experiences.add(name);
+ render()
+}
 function saveUseCaseDefinition(mode){
  if(mode==='continue'){activeUseCasePhase='outputs';toast('Use case definition saved');render();return}
  if(mode==='review'){toast('Definition submitted for review as a new exact-version draft');return}
@@ -665,10 +707,10 @@ function exportOnboarding(format){
    downloadText(activeUseCase.replaceAll(' ','_')+'_questions.csv',content,'text/csv');return
  }
  if(format==='json'){
-   const obj={lineOfBusiness:activeLOB,domain,useCase:activeUseCase,outcome:cfg.outcome,audience:cfg.audience,owner:cfg.owner,questions:cfg.questions,knowledgeFoundation:[...cfg.foundation],knowledgeExperiences:[...cfg.experiences]};
+   const obj={lineOfBusiness:activeLOB,domain,useCase:activeUseCase,outcome:cfg.outcome,audience:cfg.audience,owner:cfg.owner,questions:cfg.questions,semanticModel:'Mandatory',executionArchitecture:cfg.executionArchitecture,knowledgeExperiences:[...cfg.experiences]};
    downloadText(activeUseCase.replaceAll(' ','_')+'_onboarding.json',JSON.stringify(obj,null,2),'application/json');return
  }
- const html=`<!doctype html><html><head><meta charset="utf-8"><title>${activeUseCase} Onboarding Pack</title><style>body{font-family:Aptos,Segoe UI,sans-serif;padding:40px;color:#10233a}h1{font-size:34px}h2{margin-top:28px}li{margin:9px 0}.tag{display:inline-block;padding:6px 10px;border:1px solid #ccd9df;border-radius:999px;margin:3px}</style></head><body><h1>${activeUseCase}</h1><p><b>Line of Business:</b> ${activeLOB} &nbsp; <b>Domain:</b> ${domain}</p><h2>Business Outcome</h2><p>${cfg.outcome}</p><h2>Business Questions</h2><ol>${cfg.questions.map(q=>`<li>${q}</li>`).join('')}</ol><h2>Knowledge Foundation</h2>${[...cfg.foundation].map(x=>`<span class="tag">${x}</span>`).join('')}<h2>Knowledge Experiences</h2>${[...cfg.experiences].map(x=>`<span class="tag">${x}</span>`).join('')}<h2>Workspace Plan</h2><p>Data Foundation → Semantic Studio → Publish Knowledge → Activated Experiences → Knowledge Operations → Delivery Center → Review Center</p></body></html>`;
+ const html=`<!doctype html><html><head><meta charset="utf-8"><title>${activeUseCase} Onboarding Pack</title><style>body{font-family:Aptos,Segoe UI,sans-serif;padding:40px;color:#10233a}h1{font-size:34px}h2{margin-top:28px}li{margin:9px 0}.tag{display:inline-block;padding:6px 10px;border:1px solid #ccd9df;border-radius:999px;margin:3px}</style></head><body><h1>${activeUseCase}</h1><p><b>Line of Business:</b> ${activeLOB} &nbsp; <b>Domain:</b> ${domain}</p><h2>Business Outcome</h2><p>${cfg.outcome}</p><h2>Business Questions</h2><ol>${cfg.questions.map(q=>`<li>${q}</li>`).join('')}</ol><h2>Knowledge Definition</h2><span class="tag">Semantic Model — Mandatory</span><h2>Execution Architecture</h2><span class="tag">${cfg.executionArchitecture||'Not selected'}</span><h2>Knowledge Experiences</h2>${[...cfg.experiences].map(x=>`<span class="tag">${x}</span>`).join('')}<h2>Workspace Plan</h2><p>Data Foundation → Semantic Studio → Publish Knowledge → Activated Experiences → Knowledge Operations → Delivery Center → Review Center</p></body></html>`;
  downloadText(activeUseCase.replaceAll(' ','_')+'_onboarding_pack.html',html,'text/html')
 }
 function downloadText(name,content,type){
@@ -766,7 +808,7 @@ function configureSelectedUseCases(){
  return `<div class="usecase-studio">
    <aside class="usecase-switcher">
      <div class="switcher-head"><span>${activeLOB.toUpperCase()}</span><h3>Selected Use Cases</h3><p>Configure each use case independently.</p></div>
-     ${[...new Set(selectedUseCases.map(u=>u.domain))].map(domain=>`<div class="switcher-domain"><h4>${domain}</h4>${selectedUseCases.filter(u=>u.domain===domain).map(u=>{const c=ensureUseCaseConfig(u.name,u.domain),ready=c.outcome&&c.questions.length&&c.foundation.size;return `<button class="${activeUseCase===u.name?'active':''}" onclick="setActiveUseCase('${u.name.replaceAll("'","\\'")}')"><span class="uc-state ${ready?'ready':'draft'}"></span><div><b>${u.name}</b><small>${ready?'Definition ready':'Needs configuration'}</small></div><em>›</em></button>`}).join('')}</div>`).join('')}
+     ${[...new Set(selectedUseCases.map(u=>u.domain))].map(domain=>`<div class="switcher-domain"><h4>${domain}</h4>${selectedUseCases.filter(u=>u.domain===domain).map(u=>{const c=ensureUseCaseConfig(u.name,u.domain),ready=c.outcome&&c.questions.length&&c.executionArchitecture;return `<button class="${activeUseCase===u.name?'active':''}" onclick="setActiveUseCase('${u.name.replaceAll("'","\\'")}')"><span class="uc-state ${ready?'ready':'draft'}"></span><div><b>${u.name}</b><small>${ready?'Definition ready':'Needs configuration'}</small></div><em>›</em></button>`}).join('')}</div>`).join('')}
      <button class="add-more" onclick="jump('onboard',1)">＋ Add more use cases</button>
    </aside>
    <section class="usecase-design-canvas">
@@ -778,16 +820,57 @@ function configureSelectedUseCases(){
 }
 function knowledgeOutputs(){
  const cfg=ensureUseCaseConfig(activeUseCase,'');
- const neo=cfg.foundation.has('Neo4j Knowledge Graph'),queryable=neo||cfg.foundation.has('Virtual Semantic Model');
- const foundation=[['Semantic Model','Portable ontology, taxonomy, glossary, mappings and validation assets','◇'],['Neo4j Knowledge Graph','Materialized graph for traversal, GraphRAG and GDS','N'],['Virtual Semantic Model','Resolve approved concepts over warehouse / CRM data without mandatory copy','V']];
- const exp=[['Knowledge Explorer','Visual search, Entity 360, neighbourhoods and paths','⌕'],['AI & GraphRAG','Evidence-backed retrieval and answers using approved knowledge','✦'],['Graph Intelligence','Neo4j GDS projections, algorithms and ML','◉'],['API / Application Access','Expose approved knowledge to applications and services','↗']];
- const hybrid=neo&&cfg.foundation.has('Virtual Semantic Model');
- return `<div class="output-assembler usecase-output"><div class="output-intro"><div><span>KNOWLEDGE OUTPUTS • ${activeUseCase}</span><h3>Compose the architecture for this use case</h3><p>Foundation and experiences are different layers. GraphVerse only enables combinations that can actually work.</p></div><div class="architecture-badge"><b>${hybrid?'HYBRID':neo?'MATERIALIZED':cfg.foundation.has('Virtual Semantic Model')?'VIRTUAL':'SEMANTIC'}</b><small>current foundation</small></div></div>
- <div class="knowledge-product-canvas"><div class="kp-core"><span>USE CASE</span><b>${activeUseCase}</b><small>${selectedUseCases.find(u=>u.name===activeUseCase)?.domain||''}</small></div>
- <div class="kp-foundations">${foundation.map((o,i)=>`<button class="kp-node f${i+1} ${cfg.foundation.has(o[0])?'selected':''}" onclick="toggleFoundationForActive('${o[0]}')"><i>${o[2]}</i><b>${o[0]}</b><small>${o[1]}</small><em>${cfg.foundation.has(o[0])?'Selected':'Add'}</em></button>`).join('')}</div>
- <div class="kp-experiences">${exp.map((o,i)=>{const disabled=(o[0]==='Graph Intelligence'&&!neo)||((o[0]==='Knowledge Explorer'||o[0]==='AI & GraphRAG')&&!queryable);return `<button class="kp-node e${i+1} ${cfg.experiences.has(o[0])?'selected':''} ${disabled?'disabled':''}" onclick="toggleExperienceForActive('${o[0]}')"><i>${o[2]}</i><b>${o[0]}</b><small>${o[1]}</small><em>${disabled?(o[0]==='Graph Intelligence'?'Needs Neo4j':'Needs queryable foundation'):cfg.experiences.has(o[0])?'Enabled':'Enable'}</em></button>`}).join('')}</div>
- <svg class="kp-links" viewBox="0 0 1000 540" preserveAspectRatio="none"><path d="M500,265 C390,205 290,150 180,120"/><path d="M500,265 C500,175 500,125 500,90"/><path d="M500,265 C620,205 720,150 820,120"/><path d="M500,265 C365,335 255,385 160,425"/><path d="M500,265 C460,360 430,410 400,455"/><path d="M500,265 C555,360 590,410 620,455"/><path d="M500,265 C665,330 760,380 845,425"/></svg></div>
- <div class="dependency-legend"><div><b>${hybrid?'Hybrid foundation active':'Foundation composition'}</b><span>${hybrid?'Neo4j carries relationship-heavy knowledge while selected facts can remain virtual.':'Select one or more knowledge foundations.'}</span></div><div><b>Experience dependencies</b><span>Explorer and GraphRAG need a queryable foundation. Graph Intelligence specifically requires Neo4j.</span></div></div></div>`
+ const arch=cfg.executionArchitecture||'';
+ const hasMaterialized=arch==='Materialized Knowledge Graph'||arch==='Hybrid';
+ const hasQueryable=!!arch;
+ const architectures=[
+   ['Materialized Knowledge Graph','⬡','Put the approved graph-native knowledge into Neo4j.','Best when traversal, path finding, GraphRAG graph retrieval and GDS are core requirements.'],
+   ['Virtual Knowledge Model','V','Keep business data in approved enterprise sources and resolve it through semantic mappings.','Best when duplication should be minimized and graph-native analytics are not required.'],
+   ['Hybrid','H','Materialize graph-worthy topology in Neo4j while selected high-volume facts remain virtual.','Best when relationships need graph-native behavior but large transactional facts should stay in the warehouse.']
+ ];
+ const exp=[
+   ['Knowledge Explorer','⌕','Visual entity, neighborhood and path exploration.'],
+   ['AI & GraphRAG','✦','Evidence-backed retrieval and answers over approved knowledge.'],
+   ['Graph Intelligence','◉','Neo4j GDS projections, algorithms and graph ML.'],
+   ['API / Application Access','↗','Expose governed knowledge to applications and services.']
+ ];
+ return `<div class="v10-architecture">
+   <div class="v10-arch-hero"><div><span>KNOWLEDGE PRODUCT ARCHITECTURE • ${activeUseCase}</span><h2>Define meaning once. Then decide how that knowledge should execute.</h2><p>Semantic Model is not an execution choice—it is the mandatory business-definition layer. Materialized, Virtual and Hybrid describe how the approved meaning is physically served.</p></div><div class="v10-arch-current"><span>CURRENT ARCHITECTURE</span><b>${arch||'Not selected'}</b><small>Semantic Model always included</small></div></div>
+
+   <section class="v10-definition-layer">
+     <div class="v10-step-label"><i>01</i><div><span>KNOWLEDGE DEFINITION</span><h3>Semantic Model</h3><p>What HCP, HCO, Specialty, Affiliation and Engagement mean to the business.</p></div></div>
+     <div class="v10-semantic-lock"><div class="v10-semantic-icon">◇</div><div><b>Semantic Model</b><span>Mandatory for every GraphVerse knowledge product</span><small>Business concepts • vocabulary • taxonomy • relationships • rules • source meaning • validation</small></div><em>ALWAYS ON</em></div>
+     <div class="v10-semantic-note"><b>Why mandatory?</b><span>Every downstream architecture must share one approved meaning. The same SEM version drives Neo4j materialization, virtual resolution, hybrid execution and all consumer experiences.</span></div>
+   </section>
+
+   <div class="v10-down-arrow">↓</div>
+
+   <section class="v10-execution-layer">
+     <div class="v10-step-label"><i>02</i><div><span>EXECUTION ARCHITECTURE</span><h3>Choose how approved knowledge is physically served</h3><p>Choose one architecture. This is not a multi-select.</p></div></div>
+     <div class="v10-architecture-choices">${architectures.map((a,i)=>`<button class="${arch===a[0]?'selected':''}" onclick="setExecutionArchitecture('${a[0]}')"><div class="v10-choice-icon">${a[1]}</div><div><b>${a[0]}</b><span>${a[2]}</span><small>${a[3]}</small></div><i>${arch===a[0]?'✓':'○'}</i></button>`).join('')}</div>
+     ${arch?`<div class="v10-architecture-story">
+       ${arch==='Materialized Knowledge Graph'?`
+       <div class="v10-story-core"><span>SEM-014</span><b>Approved Meaning</b></div><i>→</i><div class="v10-story-platform materialized"><span>NEO4J</span><b>Materialized Knowledge Graph</b><small>HCP • HCO • Specialty • Brand • relationships • selected events</small></div>`:
+       arch==='Virtual Knowledge Model'?`
+       <div class="v10-story-core"><span>SEM-014</span><b>Approved Meaning</b></div><i>→</i><div class="v10-story-platform virtual"><span>VIRTUAL RESOLUTION</span><b>Enterprise Sources</b><small>Snowflake • Salesforce • Oracle • approved semantic mappings</small></div>`:
+       `<div class="v10-story-core"><span>SEM-014</span><b>Approved Meaning</b></div><i>→</i><div class="v10-hybrid-split"><div class="materialized"><span>NEO4J</span><b>Graph topology</b><small>HCP • HCO • Specialty • core relationships</small></div><div class="virtual"><span>VIRTUAL</span><b>Large facts</b><small>Engagement • sales • detailed measures</small></div></div>`}
+     </div>`:''}
+     ${arch==='Hybrid'?`<div class="v10-hybrid-explain"><div><b>Materialize in Neo4j</b><span>Relationship-intensive knowledge needed for traversal, graph retrieval and GDS.</span><em>HCP • HCO • Specialty • Territory • Brand • AFFILIATED_WITH • HAS_SPECIALTY</em></div><div><b>Keep virtual</b><span>Large transactional facts that do not need to become graph topology.</span><em>ENGAGEMENT_FACT • SALES_FACT • detailed measures</em></div></div>`:''}
+   </section>
+
+   <div class="v10-down-arrow">↓</div>
+
+   <section class="v10-experience-layer">
+     <div class="v10-step-label"><i>03</i><div><span>KNOWLEDGE EXPERIENCES</span><h3>Choose how people and applications will use the knowledge</h3><p>Experiences can be selected independently, subject to architecture dependencies.</p></div></div>
+     <div class="v10-experience-grid">${exp.map(o=>{const disabled=(o[0]==='Graph Intelligence'&&!hasMaterialized)||(!hasQueryable);return `<button class="${cfg.experiences.has(o[0])?'selected':''} ${disabled?'disabled':''}" onclick="toggleExperienceForActive('${o[0]}')"><i>${o[1]}</i><div><b>${o[0]}</b><span>${o[2]}</span><small>${disabled?(o[0]==='Graph Intelligence'?'Requires Materialized or Hybrid architecture':'Choose execution architecture first'):cfg.experiences.has(o[0])?'Enabled for this use case':'Available'}</small></div><em>${cfg.experiences.has(o[0])?'✓':'+'}</em></button>`}).join('')}</div>
+   </section>
+
+   <section class="v10-architecture-summary">
+     <div><span>USE-CASE ARCHITECTURE</span><h3>${activeUseCase}</h3></div>
+     <div class="v10-summary-chain"><b>Semantic Model</b><i>→</i><b>${arch||'Choose architecture'}</b><i>→</i><b>${cfg.experiences.size} experiences enabled</b></div>
+     <div><button onclick="setUseCasePhase('define')">← Back to Definition</button><button class="primary" ${arch?'':'disabled'} onclick="${arch?"setUseCasePhase('launch')":"toast('Choose an execution architecture first')"}">Save Architecture & Continue →</button></div>
+   </section>
+ </div>`
 }
 function questions(){
  const cfg=ensureUseCaseConfig(activeUseCase,'');
@@ -798,21 +881,26 @@ function questions(){
 function launch(){
  const cfg=ensureUseCaseConfig(activeUseCase,'');
  const domain=selectedUseCases.find(u=>u.name===activeUseCase)?.domain||'';
+ const arch=cfg.executionArchitecture||'';
  const journey=[
    ['Data Discovery','Select the minimum sufficient source scope'],
-   ['Semantic & Ontology Studio','Define taxonomy, ontology and business meaning'],
-   ['Graph Engineering','Consolidate, transform and engineer the physical graph'],
-   ['Load & Publish','Load, reconcile and activate the approved knowledge release']
+   ['Semantic Studio','Define and approve business meaning']
  ];
+ if(arch==='Materialized Knowledge Graph'||arch==='Hybrid'){
+   journey.push(['Graph Engineering','Compile the approved semantic model into a Neo4j implementation']);
+ }
+ journey.push(['Load & Publish',arch==='Virtual Knowledge Model'?'Publish virtual mappings and runtime policy':'Load, reconcile and publish the approved knowledge release']);
  if(cfg.experiences.has('Knowledge Explorer'))journey.push(['Knowledge Explorer','Explore entities, neighborhoods and evidence']);
  if(cfg.experiences.has('AI & GraphRAG'))journey.push(['AI & GraphRAG','Activate evidence-backed retrieval and answers']);
- if(cfg.experiences.has('Graph Intelligence'))journey.push(['Graph Intelligence','Project the populated graph into Neo4j GDS']);
- journey.push(['Knowledge Operations','Keep source, semantic and derived assets current']);
+ if(cfg.experiences.has('Graph Intelligence'))journey.push(['Graph Intelligence','Create GDS projections from the populated Neo4j topology']);
+ if(cfg.experiences.has('API / Application Access'))journey.push(['API / Application Access','Expose governed knowledge to applications']);
+ journey.push(['Knowledge Operations','Keep source, semantic and runtime assets current']);
  journey.push(['Delivery Center','Promote exact versions through CI/CD']);
- return `<div class="launch-experience"><div class="launch-hero"><div><span>READY TO LAUNCH</span><h3>${activeUseCase}</h3><p>${cfg.outcome||'Complete the use case definition before launch.'}</p><div class="launch-meta"><span>${activeLOB}</span><span>${domain}</span><span>${cfg.questions.length} business questions</span><span>${cfg.foundation.size} foundation choices</span><span>${cfg.experiences.size} experiences</span></div></div><div class="launch-orb"><b>${cfg.questions.length&&cfg.foundation.size?'READY':'DRAFT'}</b><small>workspace state</small></div></div>
- <div class="launch-sequence-head"><span>EXECUTION ORDER</span><h3>GraphVerse will guide this use case through the dependency chain below.</h3></div>
+ return `<div class="launch-experience"><div class="launch-hero"><div><span>READY TO LAUNCH</span><h3>${activeUseCase}</h3><p>${cfg.outcome||'Complete the use case definition before launch.'}</p><div class="launch-meta"><span>${activeLOB}</span><span>${domain}</span><span>Semantic Model mandatory</span><span>${arch||'Architecture not selected'}</span><span>${cfg.experiences.size} experiences</span></div></div><div class="launch-orb"><b>${cfg.questions.length&&arch?'READY':'DRAFT'}</b><small>workspace state</small></div></div>
+ <div class="launch-architecture-banner"><div><span>EXECUTION ARCHITECTURE</span><b>${arch||'Not selected'}</b><small>${arch==='Hybrid'?'Neo4j relationship core + virtual high-volume facts':arch==='Materialized Knowledge Graph'?'Approved knowledge materialized in Neo4j':arch==='Virtual Knowledge Model'?'Approved meaning resolved over enterprise sources without mandatory graph copy':'Choose architecture before launch'}</small></div><div><span>DEFINITION LAYER</span><b>Semantic Model</b><small>Always created and versioned</small></div></div>
+ <div class="launch-sequence-head"><span>EXECUTION ORDER</span><h3>The workspace path follows the architecture selected for this use case.</h3></div>
  <div class="activation-path architecture-path">${journey.map((w,i)=>`<div class="activation-node ${i<4?'foundation':'experience'}"><i>${String(i+1).padStart(2,'0')}</i><b>${w[0]}</b><small>${w[1]}</small></div>${i<journey.length-1?'<span class="activation-arrow">→</span>':''}`).join('')}</div>
- <div class="launch-footer"><div><b>Dependencies are enforced.</b><span>Graph Intelligence cannot run before a populated graph; source-to-graph loading cannot run before an approved semantic and mapping version.</span></div><button class="primary big" onclick="launchActiveUseCase()">Launch ${activeUseCase}</button></div></div>`
+ <div class="launch-footer"><div><b>Architecture dependencies are enforced.</b><span>${arch==='Virtual Knowledge Model'?'Neo4j Graph Engineering and GDS are not required for a purely virtual knowledge product.':'Graph Intelligence remains downstream of a populated Neo4j graph.'}</span></div><button class="primary big" onclick="launchActiveUseCase()">Launch ${activeUseCase}</button></div></div>`
 }
 function command(){
  const stages=[
@@ -896,7 +984,8 @@ function graphEngineeringConsole(){
   ['AFFILIATED_WITH','Relationship','AFFILIATION_FACT','rel'],
   ['Engagement','Event candidate','ENGAGEMENT_FACT','evt']
  ];
- const traceMap={  HCP:['Snowflake.HCP_MASTER.HCP_ID','HCP.hcpId • SEM-014',':HCP {hcpId}','MERGE key + UNIQUE constraint'],
+ const traceMap={
+  HCP:['Snowflake.HCP_MASTER.HCP_ID','HCP.hcpId • SEM-014',':HCP {hcpId}','MERGE key + UNIQUE constraint'],
   HCO:['Snowflake.HCO_MASTER.HCO_ID','HCO.hcoId • SEM-014',':HCO {hcoId}','MERGE key + UNIQUE constraint'],
   Specialty:['SPECIALTY_REFERENCE.SPECIALTY_CODE','Specialty.code • Taxonomy 3.2',':Specialty {code}','taxonomy normalization + node load'],
   AFFILIATED_WITH:['AFFILIATION_FACT.HCP_ID/HCO_ID','HCP AFFILIATED_WITH HCO • SEM-014','[:AFFILIATED_WITH]','relationship loader + temporal properties'],
@@ -907,8 +996,7 @@ function graphEngineeringConsole(){
 
   <section class="ge-hero">
     <div><span>GRAPH ENGINEERING • SINGLE CONSOLE</span><h2>Compile approved meaning into an executable Neo4j implementation.</h2><p>Graph Engineering does not reinterpret the business. It consumes the exact Data Discovery and Semantic Studio contracts, generates the physical graph, lets engineers edit it, and continuously compiles the result before Load & Publish.</p></div>
-    <div class="ge-target"><span>TARGET PLATFORM</span><b>Neo4j 5.x</b><small>APOC • GDS • n10s • Vector Index available</small><em>DEV Engineering Target</em></div>
-  </section>
+    <div class="ge-target"><span>TARGET PLATFORM</span><b>Neo4j 5.x</b><small>APOC • GDS • n10s • Vector Index available</small><em>DEV Engineering Target</em></div>  </section>
 
   <div class="ge-contract-spine">
     <button onclick="jump('data',1)"><i>01</i><div><span>DATA INPUT</span><b>DSC-014</b><small>6 source objects • 31 selected fields</small></div></button>
@@ -1331,9 +1419,19 @@ function publishVerify(){
  <div class="publish-checks"><div><i>✓</i><b>Source ↔ graph reconciliation</b><span>Passed</span></div><div><i>✓</i><b>Business-question verification</b><span>3/3 sampled</span></div><div><i>✓</i><b>Lineage completeness</b><span>Complete</span></div><div><i>✓</i><b>Rollback point</b><span>KG-013 retained</span></div></div><div class="publish-actions"><button>View Release Manifest</button><button class="primary" onclick="toast('KG-014 published and downstream activation unlocked')">Publish KG-014</button></div></div>`
 }
 function publishStrategy(){
- return `<div class="publication-strategy-v2"><div class="loadpub-hero"><div><span>PUBLICATION STRATEGY</span><h2>Choose how the approved knowledge is executed.</h2><p>The use-case output decision determines whether GraphVerse materializes Neo4j, publishes a semantic package, keeps selected facts virtual, or uses a hybrid architecture.</p></div><div class="strategy-current"><b>HYBRID</b><span>Selected during onboarding</span></div></div>
- <div class="strategy-paths"><button><i>◇</i><b>Semantic Package</b><span>Taxonomy / ontology / SHACL / mappings only</span></button><button class="selected"><i>⬡</i><b>Neo4j Materialized</b><span>Canonical entities + graph relationships</span></button><button><i>V</i><b>Virtual Semantic</b><span>Resolve approved concepts over enterprise sources</span></button><button class="selected"><i>H</i><b>Hybrid</b><span>Graph relationship core + selected large facts virtual</span></button></div>
- <div class="strategy-explain"><div><b>What will be materialized in Neo4j</b><span>HCP • HCO • Specialty • Brand • Territory • Publication • core graph relationships</span></div><div><b>What can remain virtual</b><span>High-volume engagement measures and source facts that do not need graph-native traversal.</span></div></div></div>`
+ const cfg=ensureUseCaseConfig(activeUseCase,'');
+ const arch=cfg.executionArchitecture||'Hybrid';
+ const cards=[
+  ['Materialized Knowledge Graph','⬡','Neo4j','Canonical graph entities and relationships are physically loaded into Neo4j.'],
+  ['Virtual Knowledge Model','V','Enterprise Sources','Approved concepts resolve through semantic mappings without mandatory graph duplication.'],
+  ['Hybrid','H','Neo4j + Virtual','Graph-native topology is materialized while selected high-volume facts remain in source platforms.']
+ ];
+ return `<div class="publication-strategy-v2"><div class="loadpub-hero"><div><span>PUBLICATION STRATEGY • INHERITED FROM ONBOARDING</span><h2>Execute the architecture already approved for this use case.</h2><p>Semantic Model is the shared definition layer. This workspace operationalizes the selected execution architecture rather than asking the user to choose it again.</p></div><div class="strategy-current"><b>${arch}</b><span>Use-case architecture</span></div></div>
+ <div class="v10-publish-definition"><div><i>◇</i><div><span>MANDATORY DEFINITION</span><b>SEM-014 • Semantic Model</b><small>Same approved business meaning across every execution pattern</small></div></div><em>→</em><div class="selected-architecture"><span>EXECUTION ARCHITECTURE</span><b>${arch}</b><small>${cards.find(c=>c[0]===arch)?.[3]||''}</small></div></div>
+ <div class="strategy-paths">${cards.map(c=>`<div class="${arch===c[0]?'selected':''}"><i>${c[1]}</i><b>${c[0]}</b><span>${c[2]}</span><small>${c[3]}</small>${arch===c[0]?'<em>SELECTED IN ONBOARDING</em>':'<em>NOT SELECTED</em>'}</div>`).join('')}</div>
+ ${arch==='Hybrid'?`<div class="strategy-explain"><div><b>Materialize in Neo4j</b><span>HCP • HCO • Specialty • Territory • Brand • core relationship topology.</span></div><div><b>Keep virtual</b><span>High-volume engagement/sales facts and detailed measures unless graph-native traversal requires them.</span></div></div>`:
+ arch==='Materialized Knowledge Graph'?`<div class="strategy-explain"><div><b>Neo4j target</b><span>KG-014 will contain the approved canonical graph representation.</span></div><div><b>Next gate</b><span>Graph Compiler package must be approved before initial load.</span></div></div>`:
+ `<div class="strategy-explain"><div><b>Virtual execution</b><span>Source data remains in governed enterprise platforms and resolves through SEM-014 mappings.</span></div><div><b>Graph-native limitation</b><span>Neo4j GDS is not enabled unless relevant topology is later materialized.</span></div></div>`}</div>`
 }
 function publishArch(){return `<div class="architecture"><div class="archnode top"><b>Approved Semantic Model</b><span>Ontology v1.4 • Taxonomy v3.2 • Mappings v7</span></div><div class="archline v"></div><div class="archrow"><div class="archnode"><b>Neo4j</b><span>HCP/HCO relationship core</span></div><div class="archnode"><b>Virtual Model</b><span>Warehouse + CRM facts</span></div><div class="archnode"><b>Semantic Package</b><span>OWL / SHACL / JSON-LD</span></div></div><div class="archline v bottom"></div><div class="archnode consumers"><b>Consumers</b><span>Explorer • GraphRAG • GDS • APIs</span></div></div>`}
 function packageView(){return `<div class="split">${panel('Publication Package',table(['Artifact','Version','Target','Compatibility','State'],[['Ontology','1.4','All','Approved','Ready'],['Taxonomy','3.2','All','Approved','Ready'],['Neo4j schema','1.4','Neo4j DEV','Compatible','Ready'],['APOC workflows','3','Neo4j DEV','Compatible','Review'],['Virtual mappings','6','Snowflake/SFDC','Compatible','Ready'],['GraphRAG config','3','Indexes','Refresh required','Blocked'],['GDS projection spec','2','GDS','Compatible','Ready']]))}${panel('Compatibility Matrix',kv([['Neo4j','Compatible'],['APOC','Matched'],['GDS','Entitlement validated'],['n10s','Configured'],['Azure Repos','Package linked']]))}</div>`}
@@ -1345,6 +1443,7 @@ function neighborhood(){return `<div class="split">${panel('Neighbourhood Explor
 function paths(){return `<div class="split">${panel('Multi-Hop Path Finder','<div class="form-grid"><label>From<input value="HCP-00142"></label><label>To<input value="Brand X"></label><label>Max hops<input value="4"></label><label>Allowed sequence<input value="AFFILIATED_WITH > PART_OF > TARGETS"></label></div>'+flow([['Dr. Anil Sharma','HCP'],['CityCare','HCO'],['South Territory','Territory'],['Brand X','Brand']]))}${panel('Path Explanation','<div class="feed"><div><i>1</i><b>HCP currently affiliated with CityCare</b><span>Evidence</span></div><div><i>2</i><b>CityCare belongs to South Territory</b><span>Evidence</span></div><div><i>3</i><b>Brand X targets the territory</b><span>Evidence</span></div></div><div class="note">Structural path does not prove causation.</div>')}</div>`}
 function queryStudio(){return `<div class="split">${panel('Business Question','<textarea>Which products are connected to HCPs affiliated with CityCare Heart Institute?</textarea><div class="tabs-inline"><button class="active">Business mode</button><button>Expert Cypher</button></div><div class="code">MATCH (h:HCP)-[:AFFILIATED_WITH]->(o:HCO)\\nMATCH (h)-[:ENGAGED_WITH]->(b:Brand)\\nWHERE o.hcoId = $hcoId\\nRETURN h,b LIMIT $limit;</div>')}${panel('Sandbox & Results',kv([['Query plan','Bounded'],['Limit','100'],['Writes','Denied'],['Template','Q-HCO-BRAND-v2']])+table(['HCP','Brand','Path'],[['Anil Sharma','Brand X','HCP→HCO→Brand'],['Priya Menon','Brand X','HCP→HCO→Brand']]))}</div>`}
 function saved(){return panel('Saved Views & Evidence Packages',table(['Name','Type','Graph release','Evidence','Owner','Action'],[['CityCare cardiology network','Graph view','KG-014','100%','Rajesh','Open'],['Brand X path pack','Evidence package','KG-014','98%','Commercial Analytics','Export'],['HCP network diff','Cross-release','KG-013→014','100%','Data Steward','Open']]))}
+
 function ragQuestion(){return `<div class="split">${panel('Question Contract','<textarea>Which cardiologists are affiliated with CityCare Heart Institute and recently engaged with Brand X?</textarea><div class="form-grid"><label>Audience<input value="Commercial analyst"></label><label>Answer format<select><option>Short answer + evidence table</option></select></label><label>Abstention<select><option>Required if evidence incomplete</option></select></label><label>Freshness<select><option>Current graph + 90-day engagement</option></select></label></div>')}${panel('Release Thresholds','<div class="form-grid"><label>Retrieval recall ≥<input value="0.90"></label><label>Claim support ≥<input value="0.98"></label><label>Correct abstention ≥<input value="0.95"></label><label>p95 latency ≤<input value="3 sec"></label></div>')}</div>`}
 function ragSources(){return panel('Permission-Aware Knowledge Sources',table(['Use','Source','Content','Permission','Egress','Freshness'],[['✓','Neo4j KG-014','HCP/HCO facts & paths','Allowed','Graph facts','Current'],['✓','Neo4j vector index','Approved evidence embeddings','Allowed','Embeddings only','2h'],['✓','Publication documents','Approved excerpts','Allowed','Excerpt only','Daily'],['○','CRM notes','Restricted notes','Denied','No egress','Current'],['✓','Full-text index','Entity/evidence text','Allowed','Lexical','Current']]))}
 function ragSetup(){return `<div class="split">${panel('Retrieval Architecture',cards([['G','Graph traversal','Approved Cypher / paths'],['V','Vector','Semantic retrieval'],['F','Full-text','Lexical search'],['H','Hybrid','Vector + full-text'],['C','Vector + Cypher','Semantic then graph expansion'],['T','Tools / Text2Cypher','Bounded controlled tools']],3))}${panel('Retriever Policy','<div class="form-grid"><label>Primary<select><option>Hybrid + Cypher</option></select></label><label>Fallback<select><option>Graph traversal</option></select></label><label>Top K<input value="20"></label><label>Max graph hops<input value="3"></label><label>Reranker<select><option>Approved reranker v2</option></select></label><label>Permission filter<select><option>Before retrieval + before answer</option></select></label></div>')}</div>`}
@@ -1396,8 +1495,7 @@ function workspaceDescription(id){const m={
  command:'Track the real dependency chain from onboarding through data, semantics, graph engineering, load and activation.',
  data:'Discover sources and select the exact columns that define the use-case data boundary—without prematurely designing the graph.',
  semantic:'Use AI to derive business meaning from selected data, compose one connected knowledge model and approve measurable semantic readiness before Graph Engineering.',
- graph:'Compile DSC-014 and SEM-014 into an AI-generated, human-editable, fully traceable and compiler-validated Neo4j implementation package.',
- publish:'Execute the approved load, reconcile it, configure incremental/adhoc processing and publish the verified knowledge release.',
+ graph:'Compile DSC-014 and SEM-014 into an AI-generated, human-editable, fully traceable and compiler-validated Neo4j implementation package.', publish:'Execute the approved load, reconcile it, configure incremental/adhoc processing and publish the verified knowledge release.',
  explore:'Search, inspect and explain bounded entity context, paths, queries and evidence from a published knowledge release.',
  rag:'Configure evidence-led GraphRAG retrieval, evaluation and published AI behavior against approved knowledge.',
  gds:'Run business-first Neo4j GDS analysis only after a populated graph is available.',
